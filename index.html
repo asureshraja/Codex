@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html>
+<body bgcolor="white"/>
+<div id="htm">
+<script type="text/JavaScript" src="abc.js"></script> 
+<script>
+function validate(e)
+{
+var email=e.value;
+if(email.indexOf(".")==-1 || email.indexOf("@")==-1 || email.lastindexOf(".")<email.indexOf("@"))
+{
+alert("not a valid email id"); 
+return false;
+}
+
+}
+</script>
+<LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
+<div>
+<table id = "login" cellspacing="15" >
+<form name="login" id="login" action="chklogin.php" method="post">
+<tr>
+<td>
+<b><font size='5' color='#CC3366'>Login</font> </b>
+</td>
+</tr>
+<tr>
+<td><input type="text" name="userid" id="userid" value="username"  onFocus="loginusername1(this)" onblur="loginusername2(this)"/></td>
+</tr>
+<tr>
+<td><input type="text" name="pass" id="pass" value="password" onFocus="loginpassword1(this)" onblur="loginpassword2(this)" /></td>
+</tr>
+<tr>
+<td><input type="image" src="login_button.png"/></td>
+</tr>
+</form>
+<tr>
+<td><b><font size='5'>New to <font color='#CC3366'>CodeX</font>?</font> <font color='#CC3366' size='4'>Sign up</font></b></td>
+</tr>
+<form name="signup" id="signup" action="signup.php" method="post">
+<tr>
+<td><input type="text" name="newrealname" id="newrealname" value="enter your real name" onFocus="regbox(this)" onblur="regrealname(this)"/></td></tr>
+<tr>
+<td><input type="text" name="newusrnam" id="newusrnam" value="enter your username" onFocus="regbox(this)" onblur="regusername(this)"/></td>
+</tr>
+<tr>
+<td><input type="text" name="newemail" id="newemail" value="enter your email id" onFocus="regbox(this)" onblur="regemail(this)"/></td>
+</tr>
+<tr>
+<td><input type="text" name="newpass" id="newpass" value="password"  onFocus="loginpassword1(this)" onblur="loginpassword2(this)"/></td>
+</tr>
+<tr>
+<td><input type="image" src="signup.png" onclick="return validate(newemail)"/></td>
+</tr>
+</form>
+</table>
+</div>
+</img>
+</body>
+</div>
+</html>
